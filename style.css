@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: "VT323", monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Syne Mono", monospace;
+}
+
+.content {
+  padding: 20px;
+}
+
+.top {
+  text-align: center;
+  background-color: chartreuse;
+  padding: 40px 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
