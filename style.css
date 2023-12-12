@@ -16,6 +16,20 @@ h3 {
   font-family: "Syne Mono", monospace;
 }
 
+nav > a {
+  margin: 30px;
+  font-size: 2em;
+  color: rgb(149, 97, 44);
+}
+
+nav > a:hover {
+  background-color: dodgerblue;
+}
+
+nav > a:active {
+  background-color: cyan;
+}
+
 .content {
   padding: 20px;
 }
@@ -29,4 +43,16 @@ h3 {
 main {
   max-width: 800px;
   margin: 0 auto;
+}
+
+article + article {
+  margin-top: 80px;
+}
+
+main > * {
+  border-top: 2px solid darkolivegreen;
+}
+
+main > *:first-child {
+  border-top: none;
 }
