@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: unset;
+  font-family: monospace;
 }
 
 body {
@@ -68,4 +68,12 @@ article + article {
 
 .profession::after {
   content: "     💻";
+}
+
+.heading {
+  display: inline-block;
+}
+
+.sub-heading {
+  display: inline-block;
 }
