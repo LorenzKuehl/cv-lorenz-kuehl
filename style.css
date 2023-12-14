@@ -44,6 +44,16 @@ main {
   margin: 0 auto;
 }
 
+main > h2 {
+  position: relative;
+  left: 50px;
+}
+
+main > article {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 main > * {
   border-top: 2px solid darkolivegreen;
 }
@@ -62,7 +72,7 @@ article + article {
 
 .top {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
   background-color: chartreuse;
 }
 
@@ -76,4 +86,16 @@ article + article {
 
 .sub-heading {
   display: inline-block;
+}
+
+.badge {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: salmon;
+  border: 0.5px solid black;
+  right: 0;
+  top: 0;
+  font-size: 2rem;
+  border-radius: 5px;
 }
