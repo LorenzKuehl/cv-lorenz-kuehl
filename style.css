@@ -133,3 +133,30 @@ article + article {
 .top-header > p {
   font-size: 0.25em;
 }
+
+/* Using media-queries to set the behaviour and styling for different-types of devices */
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 25px;
+  }
+  article + article {
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 30px;
+  }
+  .badge {
+    position: fixed;
+  }
+}
+
+@media print {
+  .badge,
+  nav {
+    display: none;
+  }
+}
