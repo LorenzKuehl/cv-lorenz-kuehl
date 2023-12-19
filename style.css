@@ -57,6 +57,8 @@ nav > a {
   color: rgb(149, 97, 44);
   text-decoration: none;
   border: 0.05rem solid var(--main-color);
+  border-radius: 15%;
+  transition: 1s;
 }
 
 nav > a:hover {
@@ -65,6 +67,10 @@ nav > a:hover {
 
 nav > a:active {
   background-color: var(--link-active);
+}
+
+nav > a:focus {
+  background-color: var(--badge-color);
 }
 
 nav {
