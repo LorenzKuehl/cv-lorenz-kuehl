@@ -5,8 +5,21 @@ and the selection Pseudo-Element to give the whole document a background-color, 
   box-sizing: border-box;
 }
 
+:root {
+  --main-color: chartreuse;
+  --selection-color: darkorchid;
+  --link-hover: dodgerblue;
+  --link-active: cyan;
+  --header-background: linear-gradient(orange 25%, yellow 50%, chartreuse 75%);
+  --footer-background: linear-gradient(chartreuse 25%, yellow 50%, salmon 75%);
+  --badge-color: salmon;
+  --main-background: white;
+  --main-text-color: black;
+  --header-footer-dark: black;
+}
+
 *::selection {
-  background-color: darkorchid;
+  background-color: var(--selection-color);
 }
 
 /* General styling for the CV, starting with html to set font-family and -size for the whole document
@@ -31,6 +44,8 @@ h6 {
 
 body {
   margin: 0;
+  background-color: var(--main-background);
+  color: var(--main-text-color);
 }
 
 /* The a-elements within the nav are the links from the nav-bar and are styled 
@@ -41,15 +56,15 @@ nav > a {
   font-size: 2em;
   color: rgb(149, 97, 44);
   text-decoration: none;
-  border: 0.05rem solid darkolivegreen;
+  border: 0.05rem solid var(--main-color);
 }
 
 nav > a:hover {
-  background-color: dodgerblue;
+  background-color: var(--link-hover);
 }
 
 nav > a:active {
-  background-color: cyan;
+  background-color: var(--link-active);
 }
 
 nav {
@@ -92,7 +107,7 @@ main > article {
 /* Setting a border-line between the articles of the main-content and setting the margin in between */
 
 main > * {
-  border-top: 0.1rem solid chartreuse;
+  border-top: 0.1rem solid var(--main-color);
 }
 
 main > *:first-child {
@@ -108,7 +123,7 @@ article + article {
 .top {
   text-align: center;
   padding: 3rem 1rem;
-  background-image: linear-gradient(orange 25%, yellow 50%, chartreuse 75%);
+  background-image: var(--header-background);
 }
 
 .profession::after {
@@ -135,8 +150,8 @@ article + article {
   width: 5rem;
   height: 4rem;
   position: absolute;
-  background-color: salmon;
-  border: 0.1rem solid black;
+  background-color: var(--badge-color);
+  border: 0.1rem solid var(--main-color);
   right: 0;
   top: 0;
   font-size: 1.5rem;
@@ -171,7 +186,7 @@ article + article {
 
 footer {
   margin-top: 5rem;
-  background-image: linear-gradient(chartreuse 25%, yellow 50%, salmon 75%);
+  background-image: var(--footer-background);
   height: 6rem;
 }
 
@@ -189,5 +204,16 @@ footer {
 @media screen and (min-width: 992px) {
   html {
     font-size: 30px;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --main-background: black;
+    --main-text-color: chartreuse;
+  }
+  .top-header,
+  footer {
+    color: var(--header-footer-dark);
   }
 }
