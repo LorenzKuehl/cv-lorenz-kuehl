@@ -92,7 +92,7 @@ main > article {
 /* Setting a border-line between the articles of the main-content and setting the margin in between */
 
 main > * {
-  border-top: 0.1rem solid darkolivegreen;
+  border-top: 0.1rem solid chartreuse;
 }
 
 main > *:first-child {
@@ -108,7 +108,7 @@ article + article {
 .top {
   text-align: center;
   padding: 3rem 1rem;
-  background-color: chartreuse;
+  background-image: linear-gradient(orange 25%, yellow 50%, chartreuse 75%);
 }
 
 .profession::after {
@@ -167,6 +167,12 @@ article + article {
 
 .top-header > p {
   font-size: 0.25em;
+}
+
+footer {
+  margin-top: 5rem;
+  background-image: linear-gradient(chartreuse 25%, yellow 50%, salmon 75%);
+  height: 6rem;
 }
 
 /* Using media-queries to set the behaviour and styling for different-types of devices */
